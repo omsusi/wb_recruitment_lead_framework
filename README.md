@@ -37,10 +37,15 @@ graph TD
     G --> H(Telegram Intelligence Bot)
     G --> I(System Health Alerts - SMTP)
     D -.-> B
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#ccf,stroke:#333,stroke-width:2px
-    style E fill:#cfc,stroke:#333,stroke-width:2px
-    style G fill:#ff9,stroke:#333,stroke-width:2px
+    style A fill:#4A90E2,stroke:#2C3E50,stroke-width:2px,color:#fff
+    style B fill:#50C878,stroke:#2C3E50,stroke-width:2px,color:#fff
+    style E fill:#9B59B6,stroke:#2C3E50,stroke-width:2px,color:#fff
+    style G fill:#E67E22,stroke:#2C3E50,stroke-width:2px,color:#fff
+    style C fill:#34495E,stroke:#2C3E50,stroke-width:2px,color:#fff
+    style D fill:#95A5A6,stroke:#2C3E50,stroke-width:2px,color:#000
+    style F fill:#E74C3C,stroke:#2C3E50,stroke-width:2px,color:#fff
+    style H fill:#E67E22,stroke:#2C3E50,stroke-width:1px,color:#fff
+    style I fill:#E67E22,stroke:#2C3E50,stroke-width:1px,color:#fff
 
 ```
 
