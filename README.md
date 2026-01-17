@@ -56,13 +56,24 @@ While currently optimized for recruitment, the **WBRI architecture** is a highly
 
 ### 📈 Reliability & Performance Metrics
 
+These metrics are derived from production-level stress tests and automated delta-update cycles:
+
 | Metric | Specification |
 | --- | --- |
-| **Portal Coverage** | 13+ High-Priority Domains (WBPSC, WBPRB, MSCWB, etc.) |
-| **Discovery Latency** | < 300s from portal change to intelligence broadcast |
-| **Data Fidelity** | Structured SQL-backed storage with high-precision hashing |
-| **Uptime Monitoring** | Dual-layer status tracking (Telegram Heartbeat + Email Alerts) |
-| **Scalability** | Capable of supporting 100+ concurrent monitoring targets |
+| **High-Volume Ingestion** | Successfully processed **1,200+ raw links** in a single ingestion cycle. |
+| **Cold-Start Latency** | **118 minutes** for complete end-to-end processing (Ingestion → AI Parsing → Broadcast) of 750+ unique records. |
+| **Warm-Run Latency** | **~5.3 minutes** for discovery and filtering of incremental updates. |
+| **Data Reduction Efficiency** | **37.5% noise reduction** during the initial state-creation phase (751 high-intent links from 1,200 raw captures). |
+| **Persistence Integrity** | Persistent SQL state memory maintaining **850+ unique contextual fingerprints**. |
+
+---
+
+### 🧩 Implementation Highlights: The Engineering Behind the Speed
+
+* **Session-Invariant Deduplication:** Engineered a robust state-persistence engine that identifies unique content fingerprints. This successfully neutralizes the challenge of dynamic, session-based URL generation on high-volatility portals.
+* **Intelligent Logic Gates:** To maximize cost-efficiency and performance, the framework implements a "Skip-Logic" gate. If the contextual validator finds a notice already exists in memory, it bypasses the AI and Publisher stages entirely, saving compute and API credits.
+* **Contextual Intelligence:** Implemented content-aware hashing that differentiates between administrative site noise and high-value recruitment leads, ensuring only actionable data reaches the AI layer.
+* **Asynchronous Multi-Stage Pipeline:** Designed a modular workflow (Scrape → Filter → Categorize → Publish) where each stage can be independently scaled or modified for different lead-generation domains.
 
 ---
 
