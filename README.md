@@ -24,23 +24,41 @@ In high-stakes information environments, speed and data integrity are the ultima
 
 ---
 
-### 🛠️ Technical Ecosystem
+### 🔄 System Architecture & Data Lifecycle
 
-* **Core:** Python 3.12 (Modern async-aware implementation)
-* **Automation:** Selenium / Undetected-Chromedriver (Headless browser orchestration)
-* **Intelligence:** LLM Integration (Semantic parsing & summarization)
-* **State Management:** SQLite (Persistent relational state-tracking)
-* **Orchestration:** GitHub Actions (CI/CD for scheduled pipeline execution)
-* **Monitoring:** Telegram Bot API & SMTP (Multi-channel alerting)
+```mermaid
+graph TD
+    A[Autonomous Ingestion Engine] -->|Captures dynamic web data| B(Contextual Fingerprinting & Deduplication)
+    B -- Unique Content --> C{Semantic Filtering}
+    B -- Duplicate Content --> D(Persistent State Memory)
+    C -- High-Intent Lead --> E[AI-Native Synthesis]
+    C -- Noise/Irrelevant --> F(Discard)
+    E -->|Structured Intelligence| G[Multi-Channel Dispatch]
+    G --> H(Telegram Intelligence Bot)
+    G --> I(System Health Alerts - SMTP)
+    D -.-> B
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
+    style E fill:#cfc,stroke:#333,stroke-width:2px
+    style G fill:#ff9,stroke:#333,stroke-width:2px
 
----
-
-### 🔄 Data Lifecycle
+```
 
 1. **Ingestion:** Strategic extraction of portal data using browser-imitation techniques to bypass session-heavy roadblocks and dynamic URL generation.
 2. **State Verification:** High-precision hashing of content context and department metadata to ensure zero redundancy.
 3. **Semantic Analysis:** Deployment of LLMs to transform unstructured PDF and web text into schema-compliant recruitment data.
 4. **Dispatch:** Automated broadcasting to edge-nodes via Telegram and system health reporting via secure SMTP.
+
+---
+
+### 🛠️ Technical Ecosystem
+
+* **Core:** Python 3.12 (Modern async-aware implementation).
+* **Automation:** Selenium / Undetected-Chromedriver (Headless browser orchestration).
+* **Intelligence:** LLM Integration (Semantic parsing & summarization).
+* **State Management:** SQLite (Persistent relational state-tracking).
+* **Orchestration:** GitHub Actions (CI/CD for scheduled pipeline execution).
+* **Monitoring:** Telegram Bot API & SMTP (Multi-channel alerting).
 
 ---
 
@@ -61,9 +79,9 @@ These metrics are derived from production-level stress tests and automated delta
 | Metric | Specification |
 | --- | --- |
 | **High-Volume Ingestion** | Successfully processed **1,200+ raw links** in a single ingestion cycle. |
-| **Cold-Start Latency** | **118 minutes** for complete end-to-end processing (Ingestion → AI Parsing → Broadcast) of 750+ unique records. |
+| **Cold-Start Latency** | **118 minutes** for complete end-to-end processing of 750+ unique records. |
 | **Warm-Run Latency** | **~5.3 minutes** for discovery and filtering of incremental updates. |
-| **Data Reduction Efficiency** | **37.5% noise reduction** during the initial state-creation phase (751 high-intent links from 1,200 raw captures). |
+| **Data Reduction Efficiency** | **37.5% noise reduction** during the initial state-creation phase. |
 | **Persistence Integrity** | Persistent SQL state memory maintaining **850+ unique contextual fingerprints**. |
 
 ---
